@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>明光補習班｜國小教學提升專家</title>
+    <title>大立昇吉的堡補習班｜國小教學提升專家</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
         :root {
@@ -33,12 +33,12 @@
             padding: 0 20px;
         }
         .logo {
-            font-size: 28px;
+            font-size: 26px;
             font-weight: bold;
         }
         .hero {
             height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&q=80') center/cover;
+            background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&q=80') center/cover;
             display: flex;
             align-items: center;
             color: white;
@@ -52,10 +52,6 @@
         .hero h1 {
             font-size: 3.2rem;
             margin-bottom: 20px;
-        }
-        .hero p {
-            font-size: 1.4rem;
-            margin-bottom: 30px;
         }
         .btn {
             display: inline-block;
@@ -73,60 +69,17 @@
             box-shadow: 0 10px 20px rgba(255,107,107,0.3);
         }
 
-        .section {
-            padding: 100px 20px;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 60px;
-            color: #222;
-        }
+        .section { padding: 100px 20px; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        h2 { text-align: center; font-size: 2.5rem; margin-bottom: 60px; color: #222; }
 
-        /* 特色卡片 */
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-        }
-        .card {
-            background: white;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: 0.3s;
-        }
-        .card:hover {
-            transform: translateY(-15px);
-        }
-        .card-header {
-            height: 200px;
-            background: linear-gradient(135deg, #4A90E2, #1565C0);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 3rem;
-        }
-        .card-body {
-            padding: 25px;
-        }
-        .card h3 {
-            margin: 15px 0;
-            color: var(--primary);
-        }
-
-        /* TRICK 互動專區 */
+        /* TRICK 卡片 */
         .trick-section {
-            background: linear-gradient(135deg, #f8f9fa, #e8f4ff);
+            background: linear-gradient(135deg, #f0f7ff, #e3f2fd);
         }
         .trick-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 25px;
         }
         .trick-card {
@@ -134,19 +87,56 @@
             padding: 30px 20px;
             border-radius: 20px;
             text-align: center;
-            box-shadow: 0 8px 25px rgba(74,144,226,0.15);
+            box-shadow: 0 10px 30px rgba(74,144,226,0.15);
+            transition: 0.3s;
+        }
+        .trick-card:hover {
+            transform: translateY(-10px);
         }
         .trick-letter {
-            width: 70px;
-            height: 70px;
-            background: var(--primary);
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #4A90E2, #1565C0);
             color: white;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 auto 20px;
-            font-size: 2rem;
+            font-size: 2.2rem;
+            font-weight: bold;
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+        .trick-card h3 {
+            color: #1565C0;
+            margin-bottom: 10px;
+        }
+
+        .trick-main {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .trick-main a {
+            color: #FF6B6B;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* 讀書時間 */
+        .study-time {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .study-time a {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: #FF5252;
+            color: white;
+            padding: 16px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.1rem;
             font-weight: bold;
         }
 
@@ -163,7 +153,7 @@
     <!-- Header -->
     <header>
         <nav>
-            <div class="logo">明光補習班</div>
+            <div class="logo">大立昇吉的堡補習班</div>
             <div>
                 <a href="#" style="color:white; margin:0 15px; text-decoration:none;">首頁</a>
                 <a href="#" style="color:white; margin:0 15px; text-decoration:none;">課程</a>
@@ -177,118 +167,68 @@
     <!-- Hero -->
     <section class="hero">
         <div class="hero-content">
-            <h1>讓每個孩子<br>都愛上學習</h1>
-            <p>專業國小補教 • 個性化教學 • 高效學習提升</p>
-            <a href="#" class="btn">立即體驗免費診斷課程</a>
+            <h1>大立昇吉的堡<br>讓孩子快樂高效學習</h1>
+            <p>專業國小補教 • 小班制教學 • TRICK 教育理念</p>
+            <a href="#" class="btn">立即報名體驗課程</a>
         </div>
     </section>
 
-    <!-- 教學特色 -->
-    <section class="section">
-        <div class="container">
-            <h2>明光四大教學優勢</h2>
-            <div class="cards">
-                <div class="card">
-                    <div class="card-header"><i class="fas fa-chalkboard-teacher"></i></div>
-                    <div class="card-body">
-                        <h3>小班制精緻教學</h3>
-                        <p>每班最多12人，確保每位學生都能獲得老師充分關注</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header"><i class="fas fa-chart-line"></i></div>
-                    <div class="card-body">
-                        <h3>AI 學習診斷系統</h3>
-                        <p>精準找出孩子學習弱點，客製化個人化學習路徑</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header"><i class="fas fa-users"></i></div>
-                    <div class="card-body">
-                        <h3>多元能力開發</h3>
-                        <p>不只補習，更培養思考力、表達力與學習自信</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- TRICK 師生互動 -->
+    <!-- TRICK 師生互動專區 -->
     <section class="section trick-section">
         <div class="container">
-            <h2>使用 <span style="color:#FF6B6B;">TRICK</span> 提升師生互動</h2>
+            <div class="trick-main">
+                <h2>使用 <span style="color:#FF6B6B; font-size:2.8rem;">TRICK</span> 提升師生互動</h2>
+                <p style="font-size:1.2rem; margin-top:10px;">
+                    <a href="TRICKSkill/TrickSkillEvaluation.html" target="_blank">→ 點擊了解 TRICK 技能評量 ←</a>
+                </p>
+            </div>
+
             <div class="trick-grid">
                 <div class="trick-card">
                     <div class="trick-letter">T</div>
-                    <h3>Teamwork 團隊合作</h3>
-                    <p>小組討論與協作學習，培養孩子團隊精神</p>
+                    <h3>Trust</h3>
+                    <p>信任</p>
+                    <small>建立師生互信，創造安心學習環境</small>
                 </div>
                 <div class="trick-card">
                     <div class="trick-letter">R</div>
-                    <h3>Respect 尊重鼓勵</h3>
-                    <p>正向回饋文化，讓孩子敢於表達與嘗試</p>
+                    <h3>Respect</h3>
+                    <p>尊重</p>
+                    <small>尊重每個孩子的個性與學習節奏</small>
                 </div>
                 <div class="trick-card">
                     <div class="trick-letter">I</div>
-                    <h3>Interaction 高度互動</h3>
-                    <p>老師與學生、學生與學生之間頻繁互動</p>
+                    <h3>Independence</h3>
+                    <p>獨立</p>
+                    <small>培養自主思考與解決問題的能力</small>
                 </div>
                 <div class="trick-card">
                     <div class="trick-letter">C</div>
-                    <h3>Creativity 創意發想</h3>
-                    <p>透過遊戲化、專案式學習激發創意</p>
+                    <h3>Collaboration</h3>
+                    <p>合作</p>
+                    <small>透過團隊活動提升溝通與協作力</small>
                 </div>
                 <div class="trick-card">
                     <div class="trick-letter">K</div>
-                    <h3>Knowledge 知識內化</h3>
-                    <p>不只是背誦，更要真正理解與應用</p>
+                    <h3>Kindness</h3>
+                    <p>友善</p>
+                    <small>以溫柔正向的方式引導孩子成長</small>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- 測驗卡片 -->
-    <section class="section">
-        <div class="container">
-            <h2>能力診斷測驗</h2>
-            <div class="cards">
-                <div class="card">
-                    <div class="card-header" style="background: linear-gradient(135deg, #FF9800, #F57C00);">
-                        <i class="fas fa-calculator"></i>
-                    </div>
-                    <div class="card-body">
-                        <h3>數學能力測驗</h3>
-                        <p>涵蓋計算、應用題、幾何概念</p>
-                        <a href="#" class="btn" style="background:#FF9800; margin-top:15px; padding:10px 24px; font-size:1rem;">立即測驗</a>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header" style="background: linear-gradient(135deg, #4CAF50, #2E7D32);">
-                        <i class="fas fa-book"></i>
-                    </div>
-                    <div class="card-body">
-                        <h3>閱讀理解測驗</h3>
-                        <p>文章理解、詞彙運用、推論能力</p>
-                        <a href="#" class="btn" style="background:#4CAF50; margin-top:15px; padding:10px 24px; font-size:1rem;">立即測驗</a>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header" style="background: linear-gradient(135deg, #9C27B0, #6A1B9A);">
-                        <i class="fas fa-lightbulb"></i>
-                    </div>
-                    <div class="card-body">
-                        <h3>邏輯思考測驗</h3>
-                        <p>序列、圖形、因果關係分析</p>
-                        <a href="#" class="btn" style="background:#9C27B0; margin-top:15px; padding:10px 24px; font-size:1rem;">立即測驗</a>
-                    </div>
-                </div>
+            <!-- TRICK的讀書時間 -->
+            <div class="study-time">
+                <a href="https://youtu.be/iDSfTek6hmY?si=Lwjq3lrMwzz8qknF" target="_blank">
+                    <i class="fas fa-play-circle"></i>
+                    TRICK的讀書時間
+                </a>
             </div>
         </div>
     </section>
 
     <footer>
-        <p><strong>明光國小補習班</strong> © 2026 All Rights Reserved</p>
-        <p>地址：桃園市桃園區中山路XX號 | 電話：(03) XXX-XXXX</p>
+        <p><strong>大立昇吉的堡補習班</strong> © 2026 All Rights Reserved</p>
+        <p>桃園市 • 專業國小補教</p>
     </footer>
 
 </body>
