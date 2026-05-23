@@ -1,1 +1,437 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>你在培養成績，還是在培養能力？</title>
+
+<style>
+
+body{
+font-family:"Microsoft JhengHei",sans-serif;
+background:#f4f7fb;
+margin:0;
+padding:20px;
+line-height:1.8;
+color:#333;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 8px 25px rgba(0,0,0,0.08);
+}
+
+h1{
+text-align:center;
+color:#2c5282;
+font-size:32px;
+}
+
+.subtitle{
+text-align:center;
+color:#666;
+margin-bottom:30px;
+}
+
+.question{
+margin:35px 0;
+padding:20px;
+background:#f8fbff;
+border-radius:15px;
+border-left:6px solid #4a90e2;
+}
+
+.question h3{
+margin-top:0;
+color:#1f4f82;
+}
+
+.option{
+display:block;
+margin:10px 0;
+padding:12px;
+background:white;
+border:2px solid #ddd;
+border-radius:10px;
+cursor:pointer;
+transition:.2s;
+}
+
+.option:hover{
+background:#edf6ff;
+border-color:#4a90e2;
+}
+
+.correct{
+background:#d7f5dc !important;
+border-color:#2ea44f !important;
+}
+
+.wrong{
+background:#ffe0e0 !important;
+border-color:#d73a49 !important;
+}
+
+.explain{
+display:none;
+margin-top:15px;
+padding:15px;
+background:#fff8db;
+border-radius:10px;
+}
+
+button{
+display:block;
+margin:35px auto;
+padding:15px 35px;
+font-size:18px;
+border:none;
+border-radius:12px;
+background:#2c7be5;
+color:white;
+cursor:pointer;
+}
+
+button:hover{
+background:#1b64c9;
+}
+
+#result{
+display:none;
+margin-top:40px;
+padding:25px;
+background:#edf7ed;
+border-radius:15px;
+font-size:20px;
+text-align:center;
+}
+
+.score{
+font-size:42px;
+font-weight:bold;
+color:#2e7d32;
+}
+
+.footer{
+margin-top:35px;
+font-size:14px;
+color:#888;
+text-align:center;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>
+你在培養成績，還是在培養能力？
+</h1>
+
+<div class="subtitle">
+五個補習班現場情境，測測你的教育直覺
+</div>
+
+<form id="quiz">
+
+<div class="question">
+
+<h3>
+1. 功課寫很快，但錯很多
+</h3>
+
+<p>
+小宇每天第一個寫完作業，但粗心很多。
+提醒後他說：
+「反正寫完就好了。」
+</p>
+
+<label class="option">
+<input type="radio" name="q1" value="0">
+A. 多加兩頁練習
+</label>
+
+<label class="option">
+<input type="radio" name="q1" value="0">
+B. 每次錯都立刻糾正
+</label>
+
+<label class="option">
+<input type="radio" name="q1" value="1">
+C. 問：「快和做好，哪個重要？」
+</label>
+
+<label class="option">
+<input type="radio" name="q1" value="0">
+D. 跟其他同學比較
+</label>
+
+<label class="option">
+<input type="radio" name="q1" value="0">
+E. 強制要求慢慢寫
+</label>
+
+<div class="explain">
+建立思考能力，比直接控制更重要。
+引導孩子思考，比命令更能建立內在動機。
+</div>
+
+</div>
+
+<div class="question">
+
+<h3>
+2. 一遇到難題就說「我不會」
+</h3>
+
+<p>
+安安遇到稍難數學題就放棄。
+但老師陪著做，其實做得出來。
+</p>
+
+<label class="option">
+<input type="radio" name="q2" value="0">
+A. 數學能力太差
+</label>
+
+<label class="option">
+<input type="radio" name="q2" value="0">
+B. 單純懶惰
+</label>
+
+<label class="option">
+<input type="radio" name="q2" value="1">
+C. 還沒建立卡住也能思考的習慣
+</label>
+
+<label class="option">
+<input type="radio" name="q2" value="0">
+D. 全部換簡單題
+</label>
+
+<label class="option">
+<input type="radio" name="q2" value="0">
+E. 想引起注意
+</label>
+
+<div class="explain">
+學習能力不只是會不會，而是遇到困難時是否願意繼續。
+</div>
+
+</div>
+
+<div class="question">
+
+<h3>
+3. 考不好就覺得自己笨
+</h3>
+
+<p>
+小美考不好時總說：
+「我是不是很笨？」
+</p>
+
+<label class="option">
+<input type="radio" name="q3" value="0">
+A. 下次考好就好
+</label>
+
+<label class="option">
+<input type="radio" name="q3" value="0">
+B. 不要哭
+</label>
+
+<label class="option">
+<input type="radio" name="q3" value="0">
+C. 別人也錯很多
+</label>
+
+<label class="option">
+<input type="radio" name="q3" value="1">
+D. 哪些錯誤，下次能進步？
+</label>
+
+<label class="option">
+<input type="radio" name="q3" value="0">
+E. 太在意分數
+</label>
+
+<div class="explain">
+成長型思維重點不是避免失敗，而是從失敗找方向。
+</div>
+
+</div>
+
+<div class="question">
+
+<h3>
+4. 「這個會考嗎？」
+</h3>
+
+<p>
+柏翰最常問：
+「這個會考嗎？」
+</p>
+
+<label class="option">
+<input type="radio" name="q4" value="0">
+A. 記憶力不好
+</label>
+
+<label class="option">
+<input type="radio" name="q4" value="0">
+B. 不夠認真
+</label>
+
+<label class="option">
+<input type="radio" name="q4" value="0">
+C. 太愛聊天
+</label>
+
+<label class="option">
+<input type="radio" name="q4" value="1">
+D. 學習動機只剩考試
+</label>
+
+<label class="option">
+<input type="radio" name="q4" value="0">
+E. 天生不愛念書
+</label>
+
+<div class="explain">
+長期學習力，需要從外在獎勵慢慢轉向內在好奇。
+</div>
+
+</div>
+
+<div class="question">
+
+<h3>
+5. 很怕輸給別人
+</h3>
+
+<p>
+樂樂只要不是第一名，就很難過。
+</p>
+
+<label class="option">
+<input type="radio" name="q5" value="0">
+A. 第一名最重要
+</label>
+
+<label class="option">
+<input type="radio" name="q5" value="0">
+B. 絕對不能輸
+</label>
+
+<label class="option">
+<input type="radio" name="q5" value="0">
+C. 贏別人最重要
+</label>
+
+<label class="option">
+<input type="radio" name="q5" value="1">
+D. 比較的是現在和以前的自己
+</label>
+
+<label class="option">
+<input type="radio" name="q5" value="0">
+E. 長大自然懂
+</label>
+
+<div class="explain">
+真正長期競爭力，不是一直贏，而是一直成長。
+</div>
+
+</div>
+
+<button type="button" onclick="calculate()">
+查看結果
+</button>
+
+</form>
+
+<div id="result"></div>
+
+<div class="footer">
+不是找標準答案，而是重新看見孩子真正需要的能力。
+</div>
+
+</div>
+
+<script>
+
+function calculate(){
+
+let total=0;
+
+for(let i=1;i<=5;i++){
+
+let choice=document.querySelector(
+'input[name="q'+i+'"]:checked'
+);
+
+if(!choice){
+
+alert("請完成所有題目");
+
+return;
+
+}
+
+total+=Number(choice.value);
+
+}
+
+let text="";
+
+if(total<=2){
+
+text="你比較容易看見『結果』。試著多觀察孩子的學習過程。";
+
+}else if(total<=4){
+
+text="你開始重視能力養成，也許可以多加入引導提問。";
+
+}else{
+
+text="你傾向培養孩子長期能力、內在動機與成長思維。";
+
+}
+
+document.getElementById("result").innerHTML=`
+
+<div class="score">
+${total}/5
+</div>
+
+<p>
+${text}
+</p>
+
+`;
+
+document.getElementById("result").style.display="block";
+
+document
+.querySelectorAll(".explain")
+.forEach(x=>x.style.display="block");
+
+window.scrollTo({
+top:document.body.scrollHeight,
+behavior:"smooth"
+});
+
+}
+
+</script>
+
+</body>
+</html>
